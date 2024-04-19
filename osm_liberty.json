@@ -16,6 +16,14 @@
       "maxZoom": 14,
       "maxzoom": 18,
       "attribution": "建物データの出典：<a href='https://www.gsi.go.jp/' target='_blank'>国土地理院ベクトルタイル提供実験</a>"
+    },
+    "osm-building": {
+      "type": "vector",
+      "tiles": [
+        "https://k96mz.github.io/20240419building3D/VTpractice/{x}/{y}/{z}.pbf"
+      ],
+      "minZoom": 7,
+      "maxZoom": 10
     }
   },
   "layers": [
@@ -34,8 +42,19 @@
       "source-layer": "building",
       "layout": { "visibility": "visible" },
       "paint": {
-        "fill-extrusion-color": "#C0C0C0",
+        "fill-extrusion-color": "rgba(180, 85, 85, 1)",
         "fill-extrusion-height": 50
+      }
+    },
+    {
+      "id": "building",
+      "type": "fill-extrusion",
+      "source": "osm-building",
+      "source-layer": "building",
+      "layout": { "visibility": "visible" },
+      "paint": {
+        "fill-extrusion-color": "rgba(50, 185, 85, 1)",
+        "fill-extrusion-height": 500
       }
     }
   ]
