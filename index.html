@@ -31,7 +31,9 @@
     <script>
       const map = new maplibregl.Map({
         container: "map", // container id
-        style: "./osm_liberty.json", // style URL
+        // style: "./osm_liberty.json", // style URL
+        style:
+          "https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL", // style URL
         center: [132.652106, 34.418256], // starting position [lng, lat]
         zoom: 5, // starting zoom
         maplibreLogo: true,
