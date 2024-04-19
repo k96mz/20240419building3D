@@ -1,11 +1,5 @@
 {
   "version": 8,
-  "name": "OSM Liberty",
-  "metadata": {
-    "maputnik:license": "https://github.com/maputnik/osm-liberty/blob/gh-pages/LICENSE.md",
-    "maputnik:renderer": "mbgljs",
-    "openmaptiles:version": "3.x"
-  },
   "sources": {
     "gsi-tile": {
       "type": "raster",
@@ -13,25 +7,17 @@
       "tileSize": 256,
       "attribution": "地図の出典：<a href='https://www.gsi.go.jp/' target='_blank'>地理院タイル（標準）</a>"
     },
-    "natural_earth_shaded_relief": {
-      "maxzoom": 6,
-      "tileSize": 256,
-      "tiles": [
-        "https://klokantech.github.io/naturalearthtiles/tiles/natural_earth_2_shaded_relief.raster/{z}/{x}/{y}.png"
-      ],
-      "type": "raster"
-    },
     "gsi-vector": {
       "type": "vector",
       "tiles": [
         "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"
       ],
-      "minzoom": 0,
-      "maxzoom": 18
+      "minZoom": 0,
+      "maxZoom": 14,
+      "maxzoom": 18,
+      "attribution": "建物データの出典：<a href='https://www.gsi.go.jp/' target='_blank'>国土地理院ベクトルタイル提供実験</a>"
     }
   },
-  "sprite": "https://maputnik.github.io/osm-liberty/sprites/osm-liberty",
-  "glyphs": "https://orangemug.github.io/font-glyphs/glyphs/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "gsi-tile",
@@ -40,28 +26,15 @@
       "minzoom": 0,
       "maxzoom": 24
     },
-    {
-      "id": "natural_earth",
-      "type": "raster",
-      "source": "natural_earth_shaded_relief",
-      "maxzoom": 6,
-      "paint": {
-        "raster-opacity": {
-          "base": 1.5,
-          "stops": [
-            [0, 0.6],
-            [6, 0.1]
-          ]
-        }
-      }
-    },
+
     {
       "id": "gsi-building",
       "type": "fill-extrusion",
       "source": "gsi-vector",
       "source-layer": "building",
+      "layout": { "visibility": "visible" },
       "paint": {
-        "fill-extrusion-color": "rgba(146, 85, 85, 1)",
+        "fill-extrusion-color": "#C0C0C0",
         "fill-extrusion-height": 50
       }
     }
