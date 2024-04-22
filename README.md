@@ -20,3 +20,9 @@ https://k96mz.github.io/20240419building3D/geojson/VTbuilding2explode/13/7269/32
 
 タイルの存在確認  
 https://k96mz.github.io/20240419building3D/geojson/VTbuilding2explodeio/13/7269/3223.pbf
+
+- overpass-turbo からデータダウンロードしたバージョン  
+  https://k96mz.github.io/20240419building3D/VTbuilding2Overpass.html
+
+タイルの存在確認  
+https://k96mz.github.io/20240419building3D/geojson/VTbuilding2Overpass/13/7269/3223.pbf
