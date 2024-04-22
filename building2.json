@@ -7,23 +7,13 @@
       "tileSize": 256,
       "attribution": "地図の出典：<a href='https://www.gsi.go.jp/' target='_blank'>地理院タイル（標準）</a>"
     },
-    "gsi-vector": {
+    "osm-building2": {
       "type": "vector",
       "tiles": [
-        "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"
+        "https://k96mz.github.io/20240419building3D/VTpractice2/{x}/{y}/{z}.pbf"
       ],
-      "minZoom": 0,
-      "maxZoom": 14,
-      "maxzoom": 18,
-      "attribution": "建物データの出典：<a href='https://www.gsi.go.jp/' target='_blank'>国土地理院ベクトルタイル提供実験</a>"
-    },
-    "osm-building": {
-      "type": "vector",
-      "tiles": [
-        "https://k96mz.github.io/20240419building3D/VTpractice/{x}/{y}/{z}.pbf"
-      ],
-      "minZoom": 7,
-      "maxZoom": 10
+      "minZoom": 10,
+      "maxZoom": 15
     }
   },
   "layers": [
@@ -34,23 +24,11 @@
       "minzoom": 0,
       "maxzoom": 24
     },
-
     {
-      "id": "gsi-building",
+      "id": "building2",
       "type": "fill-extrusion",
-      "source": "gsi-vector",
-      "source-layer": "building",
-      "layout": { "visibility": "visible" },
-      "paint": {
-        "fill-extrusion-color": "rgba(180, 85, 85, 1)",
-        "fill-extrusion-height": 50
-      }
-    },
-    {
-      "id": "building",
-      "type": "fill-extrusion",
-      "source": "osm-building",
-      "source-layer": "building",
+      "source": "osm-building2",
+      "source-layer": "building2",
       "layout": { "visibility": "visible" },
       "paint": {
         "fill-extrusion-color": "rgba(50, 185, 85, 1)",
