@@ -10,7 +10,7 @@
     "osm-building2": {
       "type": "vector",
       "tiles": [
-        "https://k96mz.github.io/20240419building3D/VTpractice2/{x}/{y}/{z}.pbf"
+        "https://k96mz.github.io/20240419building3D/VTpractice2/{z}/{x}/{y}.pbf"
       ],
       "minZoom": 10,
       "maxZoom": 15
