@@ -1,0 +1,39 @@
+{
+  "version": 8,
+  "sources": {
+    "gsi-tile": {
+      "type": "raster",
+      "tiles": ["https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "attribution": "地図の出典：<a href='https://www.gsi.go.jp/' target='_blank'>地理院タイル（標準）</a>"
+    },
+    "osm-building2": {
+      "type": "vector",
+      "tiles": [
+        "https://k96mz.github.io/20240419building3D/geojson/VTbuilding2explodeio/{z}/{x}/{y}.pbf"
+      ],
+      "minZoom": 10,
+      "maxZoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "gsi-tile",
+      "type": "raster",
+      "source": "gsi-tile",
+      "minzoom": 0,
+      "maxzoom": 24
+    },
+    {
+      "id": "building2",
+      "type": "fill-extrusion",
+      "source": "osm-building2",
+      "source-layer": "building2",
+      "layout": { "visibility": "visible" },
+      "paint": {
+        "fill-extrusion-color": "rgba(50, 185, 85, 1)",
+        "fill-extrusion-height": ["get", ["other_tags", ["get", "height"]]]
+      }
+    }
+  ]
+}
