@@ -32,7 +32,7 @@
       "layout": { "visibility": "visible" },
       "paint": {
         "fill-extrusion-color": "rgba(50, 185, 85, 1)",
-        "fill-extrusion-height": 500
+        "fill-extrusion-height": ["get", ["other_tags", ["get", "height"]]]
       }
     }
   ]
