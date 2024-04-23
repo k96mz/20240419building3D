@@ -26,3 +26,9 @@ https://k96mz.github.io/20240419building3D/geojson/VTbuilding2explodeio/13/7269/
 
 タイルの存在確認  
 https://k96mz.github.io/20240419building3D/geojson/VTbuilding2Overpass/13/7269/3223.pbf
+
+- overpass-turbo からデータダウンロードして geojon.io を経由したバージョン  
+  https://k96mz.github.io/20240419building3D/VTbuilding2Overpassio.html
+
+タイルの存在確認  
+https://k96mz.github.io/20240419building3D/geojson/VTbuilding2Overpassio/13/7269/3223.pbf
