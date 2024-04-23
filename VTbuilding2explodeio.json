@@ -31,7 +31,7 @@
       "source-layer": "building2",
       "layout": { "visibility": "visible" },
       "paint": {
-        "fill-extrusion-color": "rgba(50, 185, 85, 1)",
+        "fill-extrusion-color": "rgba(180, 180, 180, 1)",
         "fill-extrusion-height": ["get", "height"]
       }
     }
